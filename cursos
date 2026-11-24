@@ -1,0 +1,28 @@
+import java.util.Scanner; // Opcional: importa recursos externos
+
+public class Cursos { // Nome do arquivo deve ser Cursos.java
+    public static void main(String[] args) {
+        Map<Integer, String> cursos = new HashMap<>();
+        cursos.put(101, "Análise e Desenvolvimento de Sistemas");
+        cursos.put(202, "Engenharia de Software");
+
+        // Busca e imprime o nome de 2 cursos específicos
+        int codigo1 = 101;
+        int codigo2 = 202;
+
+        System.out.println("Curso " + codigo1 + ": " + cursos.get(codigo1));
+        System.out.println("Curso " + codigo2 + ": " + cursos.get(codigo2));
+
+        // 2. Remover um curso encerrado informando o código (ex: código 20)
+        int codigoEncerrado = 20;
+        cursos.remove(codigoEncerrado);
+
+        // Verificação para o código 99
+        int codigoBusca = 99;
+        if (cursos.containsKey(codigoBusca)) {
+            System.out.println("Curso " + codigoBusca + ": " + cursos.get(codigoBusca));
+        } else {
+            System.out.println("Código de curso inválido!");
+        }
+    }
+}
